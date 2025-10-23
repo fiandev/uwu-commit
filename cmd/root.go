@@ -37,7 +37,7 @@ var (
 
 // RootCmd represents the base command when called without any subcommands
 var RootCmd = &cobra.Command{
-	Use:     "gmc",
+	Use:     "uwu",
 	Short:   "CLI that writes your git commit messages for you with Google Gemini AI",
 	Long:    "CLI that writes your git commit messages for you with Google Gemini AI",
 	Version: "0.5.0",

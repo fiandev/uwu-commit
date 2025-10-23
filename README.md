@@ -15,7 +15,7 @@ fork version from geminicommit by tfkhydt
 ## ✨ Features
 
 - **AI-Generated Commit Messages:** Let Gemini AI analyze your staged changes and suggest concise, descriptive commit messages.
-- **AI-Generated Pull Requests:** Use `gmc pr` to push your branch and open a GitHub pull request with a Gemini-generated conventional title (and body).
+- **AI-Generated Pull Requests:** Use `uwu pr` to push your branch and open a GitHub pull request with a Gemini-generated conventional title (and body).
 - **Customizable Output:** Tailor the message style and structure to fit your workflow.
 - **Conventional Commits:** Ensures messages follow best practices for readability and automation.
 - **Cross-Platform:** Works on Linux, Windows, and macOS.
@@ -37,17 +37,17 @@ go install github.com/fiandev/uwu-commit@latest
 #    https://aistudio.google.com/app/apikey
 
 # 3. Configure your API key
-gmc config key set <your-api-key>
+uwu config key set <your-api-key>
 
 # 4. (Optional) Configure model and base URL
-gmc config model set gemini-2.5-pro          # optional: change model
-gmc config baseurl set https://your-proxy    # optional: custom endpoint
+uwu config model set gemini-2.5-pro          # optional: change model
+uwu config baseurl set https://your-proxy    # optional: custom endpoint
 
 # 5. Stage your changes
 git add <file>
 
 # 6. Generate and commit
-gmc
+uwu
 ```
 
 ---
@@ -99,27 +99,27 @@ gmc
 2. Set your key:
 
    ```sh
-   gmc config key set <your-api-key>
+   uwu config key set <your-api-key>
    ```
 
 ### Advanced Configuration
 
-Configure additional settings using the `gmc config` command:
+Configure additional settings using the `uwu config` command:
 
 ```sh
 # Set or change the Gemini model (default: gemini-2.5-flash)
-gmc config model set gemini-2.5-pro
-gmc config model show
+uwu config model set gemini-2.5-pro
+uwu config model show
 
 # Set custom API base URL (for proxy servers or custom endpoints)
-gmc config baseurl set https://your-proxy.example.com
-gmc config baseurl show
+uwu config baseurl set https://your-proxy.example.com
+uwu config baseurl show
 
 # Clear custom base URL (revert to default)
-gmc config baseurl set ""
+uwu config baseurl set ""
 
 # View current API key
-gmc config key show
+uwu config key show
 ```
 
 All configuration is stored in `~/.config/geminicommit/config.toml`.
@@ -148,7 +148,7 @@ baseurl = "https://your-proxy.example.com"  # optional
 2. Run the CLI to generate a commit:
 
    ```sh
-   gmc
+   uwu
    ```
 
 3. Review and edit the AI-generated message if needed.
@@ -159,9 +159,9 @@ baseurl = "https://your-proxy.example.com"  # optional
 Use Gemini to draft a PR title & body and open a GitHub pull request:
 
 ```sh
-gmc pr              # opens a ready-for-review PR
-gmc pr --draft      # create as draft
-gmc pr --dry-run    # preview without pushing
+uwu pr              # opens a ready-for-review PR
+uwu pr --draft      # create as draft
+uwu pr --dry-run    # preview without pushing
 ```
 
 You can combine `--yes -q`, `--show-diff`, `--language`, `--baseurl`, and other flags just like the commit command.
@@ -172,33 +172,33 @@ You can combine `--yes -q`, `--show-diff`, `--language`, `--baseurl`, and other 
 
 ```sh
 # Preview commit without making changes
-gmc --dry-run
+uwu --dry-run
 
 # Display the diff before committing
-gmc --show-diff
+uwu --show-diff
 
 # Set maximum commit message length (default: 72 characters)
-gmc --max-length 50
+uwu --max-length 50
 
 # Generate commit messages in different languages
-gmc --language spanish
-gmc --language french
+uwu --language spanish
+uwu --language french
 
 # Reference specific issue numbers
-gmc --issue "#123"
-gmc --issue "JIRA-456"
+uwu --issue "#123"
+uwu --issue "JIRA-456"
 
 # Skip git commit-msg hook verification
-gmc --no-verify
+uwu --no-verify
 
 # Push committed changes to remote repository
-gmc --push
+uwu --push
 
 # Use custom API endpoint
-gmc --baseurl https://your-proxy.example.com
+uwu --baseurl https://your-proxy.example.com
 
 # Use specific Gemini model
-gmc --model gemini-1.5-pro
+uwu --model gemini-1.5-pro
 ```
 
 #### Auto Issue Detection
@@ -214,19 +214,19 @@ geminicommit automatically detects issue numbers from branch names using common 
 
 ```sh
 # Comprehensive example: dry run with diff, custom length, and language
-gmc --dry-run --show-diff --max-length 60 --language spanish
+uwu --dry-run --show-diff --max-length 60 --language spanish
 
 # Production workflow: commit and push with issue reference
-gmc --issue "#123" --push --no-verify
+uwu --issue "#123" --push --no-verify
 
 # Using custom endpoint with specific model
-gmc --baseurl https://your-proxy.example.com --model gemini-2.5-pro
+uwu --baseurl https://your-proxy.example.com --model gemini-2.5-pro
 ```
 
 For more options:
 
 ```sh
-gmc --help
+uwu --help
 ```
 
 ---
