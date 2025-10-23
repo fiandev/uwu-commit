@@ -1,10 +1,12 @@
 [![Support Palestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-project.svg)](https://github.com/Safouene1/support-palestine-banner)
 
-# geminicommit
+# uwu-commit
+
+fork version from geminicommit by tfkhydt
 
 **AI-Powered, Conventional Commit Messages with Google Gemini**
 
-![Preview](./assets/Screenshot_20241112_103154.png)
+![Preview](./assets/uwu-preview.png)
 
 **geminicommit** helps you write clear, conventional, and meaningful Git commit messages automatically using Google Gemini AI. Save time, improve your commit history, and focus on what matters—your code.
 
