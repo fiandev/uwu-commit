@@ -17,7 +17,7 @@ var showCmd = &cobra.Command{
 	Long:  `Show currently used Google Gemini API key`,
 	Run: func(cmd *cobra.Command, args []string) {
 		apiKey := viper.GetString("api.key")
-		fmt.Println(apiKey)
+		fmt.Println("Your API key: " + apiKey + " UwU")
 	},
 }
 

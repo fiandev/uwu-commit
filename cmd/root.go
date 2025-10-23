@@ -40,7 +40,7 @@ var RootCmd = &cobra.Command{
 	Use:     "uwu",
 	Short:   "CLI that writes your git commit messages for you with Google Gemini AI",
 	Long:    "CLI that writes your git commit messages for you with Google Gemini AI",
-	Version: "0.5.0",
+	Version: "1.0.0",
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	Run: rootHandler.RootCommand(
@@ -133,7 +133,7 @@ func initConfig() {
 
 	// If a config file is found, read it in.
 	if err := viper.ReadInConfig(); err != nil {
-		fmt.Println("Error: failed to read config")
+		fmt.Println("Oopsie! UwU Failed to read config file >w<")
 		os.Exit(1)
 	}
 }
@@ -148,7 +148,7 @@ func createConfig() {
 	// Create the directory if it does not exist.
 	if _, err := os.Stat(configDirPath); os.IsNotExist(err) {
 		if err := os.MkdirAll(configDirPath, 0o755); err != nil {
-			fmt.Println("Error: failed to make config dir")
+			fmt.Println("Aww, couldn't make config dir! UwU")
 			os.Exit(1)
 		}
 	}
@@ -157,7 +157,7 @@ func createConfig() {
 	if _, err := os.Stat(configFilePath); os.IsNotExist(err) {
 		file, err := os.Create(configFilePath)
 		if err != nil {
-			fmt.Println("Error: failed to make config file")
+			fmt.Println("Eek! Failed to create config file UwU")
 			os.Exit(1)
 		}
 		defer file.Close()

@@ -37,13 +37,13 @@ func (h *InteractionService) HandleUserAction(message string, opts *CommitOption
 	if err := huh.NewForm(
 		huh.NewGroup(
 			huh.NewSelect[Action]().
-				Title("Use this commit?").
+				Title("Use this commit, cutie? ♡(˃͈ ˂͈ )").
 				Options(
-					huh.NewOption("Yes", ActionConfirm),
-					huh.NewOption("Regenerate", ActionRegenerate),
-					huh.NewOption("Edit", ActionEdit),
-					huh.NewOption("Edit Context", ActionEditContext),
-					huh.NewOption("Cancel", ActionCancel),
+					huh.NewOption("Yes, let's go! (≧ヮ≦) 💕", ActionConfirm),
+					huh.NewOption("Regenerate, pwease! 🥺", ActionRegenerate),
+					huh.NewOption("Edit it, cutie! ✏️", ActionEdit),
+					huh.NewOption("Edit Context, hehe! 📝", ActionEditContext),
+					huh.NewOption("Cancel, aww... (づ￣ ³￣)づ 💞", ActionCancel),
 				).
 				Value(&selectedAction),
 		),
@@ -73,7 +73,7 @@ func (h *InteractionService) EditCommitMessage(originalMessage string) (string, 
 	message := originalMessage
 	if err := huh.NewForm(
 		huh.NewGroup(
-			huh.NewText().Title("Edit commit message manually").CharLimit(1000).Value(&message),
+			huh.NewText().Title("Edit commit message, cutie! UwU ✏️").CharLimit(1000).Value(&message),
 		),
 	).Run(); err != nil {
 		return "", err
@@ -85,7 +85,7 @@ func (h *InteractionService) EditCommitMessage(originalMessage string) (string, 
 func (h *InteractionService) EditContext(userContext *string) error {
 	if err := huh.NewForm(
 		huh.NewGroup(
-			huh.NewText().Title("Edit user context").CharLimit(1000).Value(userContext),
+			huh.NewText().Title("Edit user context, hehe! 📝 UwU").CharLimit(1000).Value(userContext),
 		),
 	).Run(); err != nil {
 		return err
@@ -101,21 +101,21 @@ func (h *InteractionService) DisplayDetectedFiles(files []string, quiet *bool) {
 
 	underline := color.New(color.Underline)
 	if len(files) == 1 {
-		underline.Printf("Detected %d staged file:\n", len(files))
+		underline.Printf("Detected %d staged file, (｡>﹏<) 📁\n", len(files))
 	} else {
-		underline.Printf("Detected %d staged files:\n", len(files))
+		underline.Printf("Detected %d staged files, (｡>﹏<) 📁\n", len(files))
 	}
 
 	// List the files
 	for idx, file := range files {
-		color.New(color.Bold).Printf("     %d. %s\n", idx+1, file)
+		color.New(color.Bold).Printf(" | %d. %s ˚♡˚ \n", idx+1, file)
 	}
 }
 
 // DisplayDiff shows the git diff to the user
 func (h *InteractionService) DisplayDiff(diff string) {
 	underline := color.New(color.Underline)
-	underline.Println("\nDiff to be analyzed:")
+	underline.Println("\nHere's the diff, ( ˶>˶˶<˶) ")
 	fmt.Println(diff)
 	fmt.Println()
 }

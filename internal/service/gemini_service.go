@@ -222,7 +222,7 @@ func (g *GeminiService) AnalyzeChanges(
 		},
 	})
 	if err != nil {
-		fmt.Println("Error:", err)
+		fmt.Println("Oopsie! UwU Error: " + err.Error() + " 😵")
 		return "", nil
 	}
 

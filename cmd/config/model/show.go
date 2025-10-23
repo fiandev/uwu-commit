@@ -17,7 +17,7 @@ var showCmd = &cobra.Command{
 	Long:  `Show currently used Google Gemini model`,
 	Run: func(cmd *cobra.Command, args []string) {
 		model := viper.GetString("api.model")
-		fmt.Println(model)
+		fmt.Println("Here's your model, cutie: " + model + " >w<")
 	},
 }
 

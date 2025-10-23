@@ -1,7 +1,7 @@
 class Uwucommit < Formula
   desc "A CLI that writes your git commit messages for you with Google Gemini AI, but it more uwu"
   homepage "https://github.com/fiandev/uwu-commit"
-  version "0.0.3"
+  version "1.0.0"
 
   on_macos do
     if Hardware::CPU.intel?

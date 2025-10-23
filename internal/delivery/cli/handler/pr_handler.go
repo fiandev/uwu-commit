@@ -67,11 +67,11 @@ func (p *PRHandler) PRCommand(
 		apiKey := viper.GetString("api.key")
 		if apiKey == "" {
 			fmt.Println(
-				"Error: API key is still empty, run this command to set your API key",
+				"Oopsie! UwU Your API key is missing! Run this cute command to set it:",
 			)
 			fmt.Print("\n")
 			color.New(color.Bold).Print("geminicommit config key set ")
-			color.New(color.Italic, color.Bold).Print("api_key\n\n")
+			color.New(color.Italic, color.Bold).Print("api_key UwU\n\n")
 			os.Exit(1)
 		}
 

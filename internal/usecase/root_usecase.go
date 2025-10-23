@@ -80,7 +80,7 @@ func (r *RootUsecase) RootCommand(
 	// Initialize Gemini client
 	client, err := r.initializeGeminiClient(ctx, apiKey, customBaseUrl)
 	if err != nil {
-		fmt.Printf("Error getting gemini client: %v", err)
+		fmt.Printf("Oopsie! UwU Error getting gemini client: %v >w<", err)
 		os.Exit(1)
 	}
 

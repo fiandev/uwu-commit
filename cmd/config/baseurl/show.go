@@ -18,9 +18,9 @@ var showCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		baseUrl := viper.GetString("api.baseurl")
 		if baseUrl == "" {
-			fmt.Println("No custom base URL configured")
+			fmt.Println("Aww, no custom base URL set up yet UwU")
 		} else {
-			fmt.Println(baseUrl)
+			fmt.Println("Your base URL: " + baseUrl + " >w<")
 		}
 	},
 }
