@@ -2,9 +2,9 @@
 
 # uwu-commit
 
-fork version from geminicommit by tfkhydt
+fork version from geminicommit by tfkhdyt
 
-**AI-Powered, Conventional Commit Messages with Google Gemini**
+**AI-Powered, Conventional Commit Messages with Google Gemini, but more uwu >⩊<**
 
 ![Preview](./assets/uwu-preview.png)
 
