@@ -1,4 +1,4 @@
-module github.com/tfkhdyt/geminicommit
+module github.com/fiandev/uwu-commit
 
 go 1.23.0
 

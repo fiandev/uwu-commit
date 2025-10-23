@@ -12,7 +12,7 @@ import (
 	"github.com/fatih/color"
 	"google.golang.org/genai"
 
-	"github.com/tfkhdyt/geminicommit/internal/service"
+	"github.com/fiandev/uwu-commit/internal/service"
 )
 
 type PRUsecase struct {

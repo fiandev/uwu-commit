@@ -29,7 +29,7 @@
 
 ```sh
 # 1. Install (Go required)
-go install github.com/tfkhdyt/geminicommit@latest
+go install github.com/fiandev/uwu-commit@latest
 
 # 2. Get your Gemini API key
 #    https://aistudio.google.com/app/apikey
@@ -70,11 +70,11 @@ gmc
     ```
 
   ```sh
-  go install github.com/tfkhdyt/geminicommit@latest
+  go install github.com/fiandev/uwu-commit@latest
   ```
 
 - **Standalone Binary:**
-  Download from the [releases page](https://github.com/tfkhdyt/geminicommit/releases) and move to a directory in your `PATH`:
+  Download from the [releases page](https://github.com/fiandev/uwu-commit/releases) and move to a directory in your `PATH`:
   - Linux: `$HOME/.local/bin/` or `/usr/local/bin/`
   - Windows: `%LocalAppData%\Programs\`
   - macOS: `/usr/local/bin/`

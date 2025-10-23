@@ -12,9 +12,9 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/viper"
 
-	"github.com/tfkhdyt/geminicommit/cmd/config"
-	"github.com/tfkhdyt/geminicommit/internal/delivery/cli/handler"
-	"github.com/tfkhdyt/geminicommit/internal/service"
+	"github.com/fiandev/uwu-commit/cmd/config"
+	"github.com/fiandev/uwu-commit/internal/delivery/cli/handler"
+	"github.com/fiandev/uwu-commit/internal/service"
 )
 
 var (
@@ -79,7 +79,7 @@ func init() {
 	// will be global for your application.
 
 	RootCmd.PersistentFlags().
-		StringVar(&cfgFile, "config", "", "config file (default is $HOME/.config/geminicommit/config.toml)")
+		StringVar(&cfgFile, "config", "", "config file (default is $HOME/.config/uwu-commit/config.toml)")
 	RootCmd.Flags().
 		BoolVarP(&stageAll, "all", "a", stageAll, "stage all changes in tracked files")
 	RootCmd.Flags().
@@ -117,7 +117,7 @@ func initConfig() {
 		// Find config directory.
 		config, err := os.UserConfigDir()
 		cobra.CheckErr(err)
-		configDirPath := filepath.Join(config, "geminicommit")
+		configDirPath := filepath.Join(config, "uwu-commit")
 		configFilePath := filepath.Join(configDirPath, "config.toml")
 
 		viper.AddConfigPath(configDirPath)
@@ -142,7 +142,7 @@ func createConfig() {
 	// Create the directory and file paths.
 	config, err := os.UserConfigDir()
 	cobra.CheckErr(err)
-	configDirPath := filepath.Join(config, "geminicommit")
+	configDirPath := filepath.Join(config, "uwu-commit")
 	configFilePath := filepath.Join(configDirPath, "config.toml")
 
 	// Create the directory if it does not exist.

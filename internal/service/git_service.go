@@ -213,7 +213,7 @@ func (g *GitService) DetectAndPrepareChanges(opts *CommitOptions) (*PreCommitDat
 
 	if len(files) == 0 {
 		return nil, fmt.Errorf(
-			"no staged changes found. stage your changes manually, or automatically stage all changes with the `--all` flag",
+			"no staged changes found (╥﹏╥).\nstage your changes manually, or automatically stage all changes with the `--all` flag",
 		)
 	}
 
@@ -280,7 +280,7 @@ func (g *GitService) ConfirmAction(message string, quiet *bool, push *bool, dryR
 	}
 
 	if !*quiet {
-		color.New(color.FgGreen).Println("✔ Successfully committed!")
+		color.New(color.FgGreen).Println("✔ Successfully committed! >⩊<")
 	}
 
 	if *push {
@@ -289,7 +289,7 @@ func (g *GitService) ConfirmAction(message string, quiet *bool, push *bool, dryR
 		}
 
 		if !*quiet {
-			color.New(color.FgGreen).Println("✔ Successfully pushed!")
+			color.New(color.FgGreen).Println("✔ Successfully pushed! >⩊<")
 		}
 	}
 
